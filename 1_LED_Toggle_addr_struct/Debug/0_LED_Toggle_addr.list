@@ -110,18 +110,17 @@ int main(void)
  8000226:	4a0b      	ldr	r2, [pc, #44]	@ (8000254 <main+0x50>)
  8000228:	f423 6300 	bic.w	r3, r3, #2048	@ 0x800
  800022c:	6013      	str	r3, [r2, #0]
+
 	while(1)
 	{
 		// set PA5 high
 		//GPIOA_OD_R |= LED_PIN;
-		// Use toggle operator ( ^ ) to toggle pin on/off
 		GPIOA_OD_R ^= LED_PIN;
  800022e:	4b0a      	ldr	r3, [pc, #40]	@ (8000258 <main+0x54>)
  8000230:	681b      	ldr	r3, [r3, #0]
  8000232:	4a09      	ldr	r2, [pc, #36]	@ (8000258 <main+0x54>)
  8000234:	f083 0320 	eor.w	r3, r3, #32
  8000238:	6013      	str	r3, [r2, #0]
-		// For loop that counts to 50k acts as a improvised delay function
 		for(int i = 0; i<500000; i++);
  800023a:	2300      	movs	r3, #0
  800023c:	607b      	str	r3, [r7, #4]
