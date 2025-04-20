@@ -1,0 +1,6 @@
+1744834549239	Delete resource '0_LED_Toggle_addr'
+1744834610867	Delete resource '1_LED_Toggle_addr_struct'
+1744834686881	Delete resource '02_gpio_output'
+1744835218999	Delete resource '2_GPIO_output'
+1744835268562	Delete resource '3_GPIO_bsrr'
+1744835501329	Delete resource '4_GPIO_input'
