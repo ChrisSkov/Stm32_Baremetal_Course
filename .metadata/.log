@@ -498,3 +498,36 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-04-20 11:02:55.983
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-04-20 11:42:05.679
+!MESSAGE Indexed '05_UART_TX' (4 sources, 62 headers) in 0.888 sec: 3,243 declarations; 5,418 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.023%)
+!SESSION 2025-04-20 12:02:03.122 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-04-20 12:02:07.748
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-04-20 12:02:07.749
+!MESSAGE Log4j2 initialized with config file C:\Users\stoff\Documents\Stm32_Baremetal_Course\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-04-20 12:02:16.678
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-04-20 12:02:53.516 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-04-20 12:03:02.008
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-04-20 12:03:02.009
+!MESSAGE Log4j2 initialized with config file C:\Users\stoff\Documents\Stm32_Baremetal_Course\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-04-20 12:03:11.553
+!MESSAGE Started RMI Server, listening on port 41337
