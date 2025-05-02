@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := 04_GPIO_input
+BUILD_ARTIFACT_NAME := 05_UART_TX
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-04_GPIO_input.elf \
+05_UART_TX.elf \
 
 MAP_FILES += \
-04_GPIO_input.map \
+05_UART_TX.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-04_GPIO_input.list \
+05_UART_TX.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: 04_GPIO_input.elf secondary-outputs
+main-build: 05_UART_TX.elf secondary-outputs
 
 # Tool invocations
-04_GPIO_input.elf 04_GPIO_input.map: $(OBJS) $(USER_OBJS) C:\Users\stoff\Documents\Stm32_Baremetal_Course\04_GPIO_input\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "04_GPIO_input.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\04_GPIO_input\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04_GPIO_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+05_UART_TX.elf 05_UART_TX.map: $(OBJS) $(USER_OBJS) C:\Users\stoff\Documents\Stm32_Baremetal_Course\05_UART_TX\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "05_UART_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\05_UART_TX\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="05_UART_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-04_GPIO_input.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "04_GPIO_input.list"
+05_UART_TX.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "05_UART_TX.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) 04_GPIO_input.elf 04_GPIO_input.list 04_GPIO_input.map default.size.stdout
+	-$(RM) 05_UART_TX.elf 05_UART_TX.list 05_UART_TX.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

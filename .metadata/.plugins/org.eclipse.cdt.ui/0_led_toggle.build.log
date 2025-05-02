@@ -1,4 +1,4 @@
-22:25:43 **** Incremental Build of configuration Debug for project 0_led_toggle ****
+21:03:22 **** Incremental Build of configuration Debug for project 0_led_toggle ****
 make -j24 all 
 arm-none-eabi-size  0_led_toggle.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  0_led_toggle.elf
 Finished building: default.size.stdout
  
 
-22:25:43 Build Finished. 0 errors, 0 warnings. (took 135ms)
+21:03:23 Build Finished. 0 errors, 0 warnings. (took 139ms)
 

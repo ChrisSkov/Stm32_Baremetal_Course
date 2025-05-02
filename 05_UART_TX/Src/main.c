@@ -1,29 +1,35 @@
+#include <stdint.h>
 #include "stm32f4xx.h"
 
 #define GPIOAEN				(1U<<0)
 #define UART2EN				(1U<<17)
 
-#define CR1_TE				(1U<<3)
-#define CR1_UE				(1U<<13)
+// CR1 = control register. Reference manual page839. USART_CR1
+#define CR1_TE				(1U<<3)  // Control Register1 Transmit Enable
+#define CR1_UE				(1U<<13) // Control Register1 USART Enable
+#define SR_TXE				(1U<<7)  // USART status register
 
 #define SYS_FREQ			16000000
-#define APB1_CLK			SYS_FREQ
+#define APB1_CLK			SYS_FREQ // APB1_Clock
 
 #define UART_BAUDRATE		115200
 
 
+static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk,  uint32_t BaudRate);
+static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
 
-static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t Baudrate );
-static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t Baudrate);
+void uar2_tx_init(void);
+void uart2_write(int ch);
 
 
 int main(void)
 {
 
+	uar2_tx_init();
 
 	while(1)
 	{
-
+		uart2_write('Y');
 	}
 }
 
@@ -37,10 +43,10 @@ void uar2_tx_init(void)
 	GPIOA->MODER &=~(1U<<4);
 	GPIOA->MODER |=(1U<<5);
 	// Set PA2 alternate function type to UART_TX (AF07)
-	GPIOA->AFR[0] |=(1U<<8);
-	GPIOA->AFR[0] |=(1U<<9);
-	GPIOA->AFR[0] |=(1U<<10);
-	GPIOA->AFR[0] &=~(1U<<11);
+	GPIOA->AFR[0] |= (1U<<8);
+	GPIOA->AFR[0] |= (1U<<9);
+	GPIOA->AFR[0] |= (1U<<10);
+	GPIOA->AFR[0] &= ~(1U<<11);
 
 	// Enable clock access to uart2
 	RCC->AHB1ENR |= UART2EN;
@@ -56,14 +62,24 @@ void uar2_tx_init(void)
 
 }
 
-
-static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t Baudrate )
+void uart2_write(int ch)
 {
-	USARTx->BRR = compute_uart_bd(PeriphClk, Baudrate);
+  /*Make sure the transmit data register is empty*/
+	while(!(USART2->SR & SR_TXE)){}
+
+  /*Write to transmit data register*/
+	USART2->DR	=  (ch & 0xFF);
 }
 
-static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t Baudrate)
+
+static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk,  uint32_t BaudRate)
 {
-	return ((PeriphClk + (Baudrate/2U))/Baudrate);
+	USARTx->BRR =  compute_uart_bd(PeriphClk,BaudRate);
 }
+
+static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate)
+{
+	return ((PeriphClk + (BaudRate/2U))/BaudRate);
+}
+
 

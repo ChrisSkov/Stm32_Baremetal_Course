@@ -1,19 +1,10 @@
-22:30:29 **** Incremental Build of configuration Debug for project 02_GPIO_output ****
+21:03:21 **** Incremental Build of configuration Debug for project 02_GPIO_output ****
 make -j24 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "02_GPIO_output.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\02_GPIO_output\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02_GPIO_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 02_GPIO_output.elf
- 
 arm-none-eabi-size  02_GPIO_output.elf 
-arm-none-eabi-objdump -h -S 02_GPIO_output.elf  > "02_GPIO_output.list"
    text	   data	    bss	    dec	    hex	filename
     792	      0	   1568	   2360	    938	02_GPIO_output.elf
 Finished building: default.size.stdout
  
-Finished building: 02_GPIO_output.list
- 
 
-22:30:29 Build Finished. 0 errors, 0 warnings. (took 394ms)
+21:03:21 Build Finished. 0 errors, 0 warnings. (took 138ms)
 
