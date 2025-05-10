@@ -1,4 +1,4 @@
-21:03:21 **** Incremental Build of configuration Debug for project 02_GPIO_output ****
+16:43:54 **** Build of configuration Debug for project 02_GPIO_output ****
 make -j24 all 
 arm-none-eabi-size  02_GPIO_output.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  02_GPIO_output.elf
 Finished building: default.size.stdout
  
 
-21:03:21 Build Finished. 0 errors, 0 warnings. (took 138ms)
+16:43:54 Build Finished. 0 errors, 0 warnings. (took 137ms)
 

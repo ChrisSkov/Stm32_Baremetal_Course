@@ -188,30 +188,30 @@ void uar2_tx_init(void)
 {
  80002dc:	b580      	push	{r7, lr}
  80002de:	af00      	add	r7, sp, #0
-	// Config uart GPIO pin
-	// Enable clock access to gpioa
-	RCC->AHB1ENR |=GPIOAEN;
+	/****************Configure uart gpio pin***************/
+	/*Enable clock access to gpioa */
+	RCC->AHB1ENR |= GPIOAEN;
  80002e0:	4b20      	ldr	r3, [pc, #128]	@ (8000364 <uar2_tx_init+0x88>)
  80002e2:	6b1b      	ldr	r3, [r3, #48]	@ 0x30
  80002e4:	4a1f      	ldr	r2, [pc, #124]	@ (8000364 <uar2_tx_init+0x88>)
  80002e6:	f043 0301 	orr.w	r3, r3, #1
  80002ea:	6313      	str	r3, [r2, #48]	@ 0x30
 
-	// Set PA2 mode to alternate function mode
+	/*Set PA2 mode to alternate function mode*/
 	GPIOA->MODER &=~(1U<<4);
  80002ec:	4b1e      	ldr	r3, [pc, #120]	@ (8000368 <uar2_tx_init+0x8c>)
  80002ee:	681b      	ldr	r3, [r3, #0]
  80002f0:	4a1d      	ldr	r2, [pc, #116]	@ (8000368 <uar2_tx_init+0x8c>)
  80002f2:	f023 0310 	bic.w	r3, r3, #16
  80002f6:	6013      	str	r3, [r2, #0]
-	GPIOA->MODER |=(1U<<5);
+	GPIOA->MODER |= (1U<<5);
  80002f8:	4b1b      	ldr	r3, [pc, #108]	@ (8000368 <uar2_tx_init+0x8c>)
  80002fa:	681b      	ldr	r3, [r3, #0]
  80002fc:	4a1a      	ldr	r2, [pc, #104]	@ (8000368 <uar2_tx_init+0x8c>)
  80002fe:	f043 0320 	orr.w	r3, r3, #32
  8000302:	6013      	str	r3, [r2, #0]
 
-	// Set PA2 alternate function type to UART_TX (AF07)
+	/*Set PA2 alternate function type to UART_TX (AF07)*/
 	GPIOA->AFR[0] |= (1U<<8);
  8000304:	4b18      	ldr	r3, [pc, #96]	@ (8000368 <uar2_tx_init+0x8c>)
  8000306:	6a1b      	ldr	r3, [r3, #32]
@@ -237,34 +237,37 @@ void uar2_tx_init(void)
  800032e:	f423 6300 	bic.w	r3, r3, #2048	@ 0x800
  8000332:	6213      	str	r3, [r2, #32]
 
-	// Enable clock access to uart2
-	RCC->AHB1ENR |= UART2EN;
+
+	/****************Configure uart module ***************/
+	/*Enable clock access to uart2 */
+	RCC->APB1ENR |= UART2EN;
  8000334:	4b0b      	ldr	r3, [pc, #44]	@ (8000364 <uar2_tx_init+0x88>)
- 8000336:	6b1b      	ldr	r3, [r3, #48]	@ 0x30
+ 8000336:	6c1b      	ldr	r3, [r3, #64]	@ 0x40
  8000338:	4a0a      	ldr	r2, [pc, #40]	@ (8000364 <uar2_tx_init+0x88>)
  800033a:	f443 3300 	orr.w	r3, r3, #131072	@ 0x20000
- 800033e:	6313      	str	r3, [r2, #48]	@ 0x30
+ 800033e:	6413      	str	r3, [r2, #64]	@ 0x40
 
-	// Config baudrate
+	/*Configure baudrate*/
 	uart_set_baudrate(USART2,APB1_CLK,UART_BAUDRATE);
  8000340:	f44f 32e1 	mov.w	r2, #115200	@ 0x1c200
  8000344:	4909      	ldr	r1, [pc, #36]	@ (800036c <uar2_tx_init+0x90>)
  8000346:	480a      	ldr	r0, [pc, #40]	@ (8000370 <uar2_tx_init+0x94>)
  8000348:	f000 f82c 	bl	80003a4 <uart_set_baudrate>
 
-	// config the transfer direction
-	USART2->CR1 = CR1_TE;
+	/*Configure the transfer direction*/
+	 USART2->CR1 =  CR1_TE;
  800034c:	4b08      	ldr	r3, [pc, #32]	@ (8000370 <uar2_tx_init+0x94>)
  800034e:	2208      	movs	r2, #8
  8000350:	60da      	str	r2, [r3, #12]
 
-	// enable the uart module
-	USART2->CR1 |= CR1_UE;
+	/*Enable uart module*/
+	 USART2->CR1 |= CR1_UE;
  8000352:	4b07      	ldr	r3, [pc, #28]	@ (8000370 <uar2_tx_init+0x94>)
  8000354:	68db      	ldr	r3, [r3, #12]
  8000356:	4a06      	ldr	r2, [pc, #24]	@ (8000370 <uar2_tx_init+0x94>)
  8000358:	f443 5300 	orr.w	r3, r3, #8192	@ 0x2000
  800035c:	60d3      	str	r3, [r2, #12]
+
 
 }
  800035e:	bf00      	nop
@@ -276,6 +279,7 @@ void uar2_tx_init(void)
  8000370:	40004400 	.word	0x40004400
 
 08000374 <uart2_write>:
+
 
 void uart2_write(int ch)
 {
@@ -308,6 +312,8 @@ void uart2_write(int ch)
  80003a0:	40004400 	.word	0x40004400
 
 080003a4 <uart_set_baudrate>:
+
+
 
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk,  uint32_t BaudRate)
