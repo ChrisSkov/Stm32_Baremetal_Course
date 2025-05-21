@@ -1,0 +1,19 @@
+#include "stm32f4xx.h"
+
+#define GPIOAEN			(1<<0)
+#define ADC1EN			(1<<8)
+
+
+void pa1_adc_init()
+{
+	// Config ADC GPIO pin
+	RCC->AHB1ENR
+	// enable clock access to GPIOA  pin port (PA1)
+	// set mode of PA1 to analog mode (mode register)
+
+
+	// Config ADC Module
+	// enable clock access to ADC Module
+	// Config ADC parameters
+
+}

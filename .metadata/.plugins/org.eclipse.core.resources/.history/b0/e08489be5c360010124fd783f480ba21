@@ -1,0 +1,3 @@
+
+
+#define ADC1EN			(1<<8)
