@@ -1,4 +1,4 @@
-19:36:08 **** Incremental Build of configuration Debug for project 07_UART_modular ****
+15:49:48 **** Build of configuration Debug for project 07_UART_modular ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
@@ -7,14 +7,14 @@ In file included from ../Src/uart.c:1:
     6 | #include "stm32f4xx.h"
       |          ^~~~~~~~~~~~~
 compilation terminated.
-make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
 ../Src/main.c:3:10: fatal error: stm32f4xx.h: No such file or directory
     3 | #include "stm32f4xx.h"
       |          ^~~~~~~~~~~~~
-make: *** Waiting for unfinished jobs....
 compilation terminated.
 make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
 "make -j8 all" terminated with exit code 2. Build might be incomplete.
 
-19:36:09 Build Failed. 5 errors, 0 warnings. (took 272ms)
+15:49:48 Build Failed. 5 errors, 0 warnings. (took 311ms)
 
