@@ -1,17 +1,12 @@
-16:43:55 **** Build of configuration Debug for project 06_UART_printf2 ****
-make -j24 all 
+15:49:47 **** Build of configuration Debug for project 06_UART_printf2 ****
+make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "06_UART_printf2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\06_UART_printf2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="06_UART_printf2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 06_UART_printf2.elf
- 
-arm-none-eabi-size  06_UART_printf2.elf 
-arm-none-eabi-objdump -h -S 06_UART_printf2.elf  > "06_UART_printf2.list"
-   text	   data	    bss	    dec	    hex	filename
-   5200	     92	   1900	   7192	   1c18	06_UART_printf2.elf
-Finished building: default.size.stdout
- 
-Finished building: 06_UART_printf2.list
- 
+../Src/main.c:3:10: fatal error: stm32f4xx.h: No such file or directory
+    3 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
 
-16:43:55 Build Finished. 0 errors, 0 warnings. (took 443ms)
+15:49:48 Build Failed. 2 errors, 0 warnings. (took 316ms)
 
