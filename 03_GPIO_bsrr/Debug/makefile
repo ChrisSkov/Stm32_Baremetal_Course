@@ -59,8 +59,8 @@ all: main-build
 main-build: 03_GPIO_bsrr.elf secondary-outputs
 
 # Tool invocations
-03_GPIO_bsrr.elf 03_GPIO_bsrr.map: $(OBJS) $(USER_OBJS) C:\Users\Chris\Documents\Stm32_Baremetal_Course\03_GPIO_bsrr\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "03_GPIO_bsrr.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Chris\Documents\Stm32_Baremetal_Course\03_GPIO_bsrr\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="03_GPIO_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+03_GPIO_bsrr.elf 03_GPIO_bsrr.map: $(OBJS) $(USER_OBJS) C:\Users\stoff\Documents\Stm32_Baremetal_Course\03_GPIO_bsrr\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "03_GPIO_bsrr.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\03_GPIO_bsrr\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="03_GPIO_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

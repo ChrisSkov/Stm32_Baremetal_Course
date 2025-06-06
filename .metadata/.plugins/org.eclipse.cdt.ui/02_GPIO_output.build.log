@@ -1,12 +1,10 @@
-15:49:45 **** Build of configuration Debug for project 02_GPIO_output ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:1:10: fatal error: stm32f4xx.h: No such file or directory
-    1 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:16:31 **** Incremental Build of configuration Debug for project 02_GPIO_output ****
+make -j24 all 
+arm-none-eabi-size  02_GPIO_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    792	      0	   1568	   2360	    938	02_GPIO_output.elf
+Finished building: default.size.stdout
+ 
 
-15:49:46 Build Failed. 2 errors, 0 warnings. (took 738ms)
+19:16:31 Build Finished. 0 errors, 0 warnings. (took 137ms)
 

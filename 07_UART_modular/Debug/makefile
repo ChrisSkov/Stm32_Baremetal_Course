@@ -59,8 +59,8 @@ all: main-build
 main-build: 07_UART_modular.elf secondary-outputs
 
 # Tool invocations
-07_UART_modular.elf 07_UART_modular.map: $(OBJS) $(USER_OBJS) C:\Users\Chris\Documents\Stm32_Baremetal_Course\07_UART_modular\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "07_UART_modular.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Chris\Documents\Stm32_Baremetal_Course\07_UART_modular\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="07_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+07_UART_modular.elf 07_UART_modular.map: $(OBJS) $(USER_OBJS) C:\Users\stoff\Documents\Stm32_Baremetal_Course\07_UART_modular\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "07_UART_modular.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\07_UART_modular\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="07_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

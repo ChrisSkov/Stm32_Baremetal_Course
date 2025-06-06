@@ -1,121 +1,154 @@
-17:43:51 **** Build of configuration Debug for project 09_ADC1 ****
-make -j8 all 
+18:42:25 **** Build of configuration Debug for project 11_Systick_Delay ****
+make -j24 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "09_ADC1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Chris\Documents\Stm32_Baremetal_Course\09_ADC1\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="09_ADC1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 09_ADC1.elf
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "11_Systick_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\11_Systick_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_Systick_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 11_Systick_Delay.elf
  
-arm-none-eabi-size  09_ADC1.elf 
-arm-none-eabi-objdump -h -S 09_ADC1.elf  > "09_ADC1.list"
+arm-none-eabi-size  11_Systick_Delay.elf 
+arm-none-eabi-objdump -h -S 11_Systick_Delay.elf  > "11_Systick_Delay.list"
    text	   data	    bss	    dec	    hex	filename
-   1148	      0	   1568	   2716	    a9c	09_ADC1.elf
+   7660	     92	   1908	   9660	   25bc	11_Systick_Delay.elf
 Finished building: default.size.stdout
  
-Finished building: 09_ADC1.list
+Finished building: 11_Systick_Delay.list
  
-15:49:44 **** Build of configuration Debug for project 01_LED_toggle_addr_struct ****
-make -j8 all 
+18:42:44 **** Incremental Build of configuration Debug for project 11_Systick_Delay ****
+make -j24 all 
+arm-none-eabi-size  11_Systick_Delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7660	     92	   1908	   9660	   25bc	11_Systick_Delay.elf
+Finished building: default.size.stdout
+ 
+19:16:31 **** Incremental Build of configuration Debug for project 01_LED_toggle_addr_struct ****
+make -j24 all 
 arm-none-eabi-size  01_LED_toggle_addr_struct.elf 
    text	   data	    bss	    dec	    hex	filename
     792	      0	   1568	   2360	    938	01_LED_toggle_addr_struct.elf
 Finished building: default.size.stdout
  
-15:49:45 **** Build of configuration Debug for project 02_GPIO_output ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:1:10: fatal error: stm32f4xx.h: No such file or directory
-    1 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:46 **** Build of configuration Debug for project 03_GPIO_bsrr ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:1:10: fatal error: stm32f4xx.h: No such file or directory
-    1 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:46 **** Build of configuration Debug for project 04_GPIO_input ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:1:10: fatal error: stm32f4xx.h: No such file or directory
-    1 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:46 **** Build of configuration Debug for project 05_UART_TX ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:2:10: fatal error: stm32f4xx.h: No such file or directory
-    2 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:47 **** Build of configuration Debug for project 06_UART_printf ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:3:10: fatal error: stm32f4xx.h: No such file or directory
-    3 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:47 **** Build of configuration Debug for project 06_UART_printf2 ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:3:10: fatal error: stm32f4xx.h: No such file or directory
-    3 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:48 **** Build of configuration Debug for project 07_UART_modular ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-In file included from ../Src/uart.c:1:
-../Inc/uart.h:6:10: fatal error: stm32f4xx.h: No such file or directory
-    6 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-../Src/main.c:3:10: fatal error: stm32f4xx.h: No such file or directory
-    3 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:28: Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:49:48 **** Build of configuration Debug for project 08_UART_RX ****
-make -j8 all 
+19:16:31 **** Incremental Build of configuration Debug for project 02_GPIO_output ****
+make -j24 all 
+arm-none-eabi-size  02_GPIO_output.elf 
+   text	   data	    bss	    dec	    hex	filename
+    792	      0	   1568	   2360	    938	02_GPIO_output.elf
+Finished building: default.size.stdout
+ 
+19:16:31 **** Incremental Build of configuration Debug for project 03_GPIO_bsrr ****
+make -j24 all 
+arm-none-eabi-size  03_GPIO_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    816	      0	   1568	   2384	    950	03_GPIO_bsrr.elf
+Finished building: default.size.stdout
+ 
+19:16:31 **** Incremental Build of configuration Debug for project 04_GPIO_input ****
+make -j24 all 
+arm-none-eabi-size  04_GPIO_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	04_GPIO_input.elf
+Finished building: default.size.stdout
+ 
+19:16:32 **** Incremental Build of configuration Debug for project 05_UART_TX ****
+make -j24 all 
+arm-none-eabi-size  05_UART_TX.elf 
+   text	   data	    bss	    dec	    hex	filename
+    996	      0	   1568	   2564	    a04	05_UART_TX.elf
+Finished building: default.size.stdout
+ 
+19:16:32 **** Incremental Build of configuration Debug for project 06_UART_printf ****
+make -j24 all 
+arm-none-eabi-size  06_UART_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5188	     92	   1900	   7180	   1c0c	06_UART_printf.elf
+Finished building: default.size.stdout
+ 
+19:16:32 **** Incremental Build of configuration Debug for project 06_UART_printf2 ****
+make -j24 all 
+arm-none-eabi-size  06_UART_printf2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5200	     92	   1900	   7192	   1c18	06_UART_printf2.elf
+Finished building: default.size.stdout
+ 
+19:16:32 **** Incremental Build of configuration Debug for project 07_UART_modular ****
+make -j24 all 
+arm-none-eabi-size  07_UART_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5196	     92	   1900	   7188	   1c14	07_UART_modular.elf
+Finished building: default.size.stdout
+ 
+19:16:32 **** Incremental Build of configuration Debug for project 08_UART_RX ****
+make -j24 all 
 arm-none-eabi-size  08_UART_RX.elf 
    text	   data	    bss	    dec	    hex	filename
    1148	      0	   1568	   2716	    a9c	08_UART_RX.elf
 Finished building: default.size.stdout
  
-15:49:49 **** Incremental Build of configuration Debug for project 09_ADC1 ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "09_ADC1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Chris\Documents\Stm32_Baremetal_Course\09_ADC1\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="09_ADC1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 09_ADC1.elf
+19:16:33 **** Clean-only build of configuration Debug for project 09_ADC_single_conversion ****
+make -j24 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/uart.cyclo ./Src/uart.d ./Src/uart.o ./Src/uart.su
+rm -rf 09_ADC1.elf 09_ADC1.list 09_ADC1.map default.size.stdout
  
-arm-none-eabi-size  09_ADC1.elf 
-arm-none-eabi-objdump -h -S 09_ADC1.elf  > "09_ADC1.list"
+19:16:33 **** Build of configuration Debug for project 09_ADC_single_conversion ****
+make -j24 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "09_ADC_single_conversion.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\09_ADC_single_conversion\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="09_ADC_single_conversion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 09_ADC_single_conversion.elf
+ 
+arm-none-eabi-size  09_ADC_single_conversion.elf 
+arm-none-eabi-objdump -h -S 09_ADC_single_conversion.elf  > "09_ADC_single_conversion.list"
    text	   data	    bss	    dec	    hex	filename
-   5400	     92	   1908	   7400	   1ce8	09_ADC1.elf
+   7652	     92	   1908	   9652	   25b4	09_ADC_single_conversion.elf
 Finished building: default.size.stdout
  
-Finished building: 09_ADC1.list
+Finished building: 09_ADC_single_conversion.list
+ 
+19:16:33 **** Build of configuration Debug for project 0_led_toggle ****
+make -j24 all 
+arm-none-eabi-size  0_led_toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    796	      0	   1568	   2364	    93c	0_led_toggle.elf
+Finished building: default.size.stdout
+ 
+19:16:33 **** Incremental Build of configuration Debug for project 10_ADC_continuous_conversion ****
+make -j24 all 
+arm-none-eabi-size  10_ADC_continuous_conversion.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7660	     92	   1908	   9660	   25bc	10_ADC_continuous_conversion.elf
+Finished building: default.size.stdout
+ 
+19:16:34 **** Incremental Build of configuration Debug for project 11_Systick_Delay ****
+make -j24 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "11_Systick_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\stoff\Documents\Stm32_Baremetal_Course\11_Systick_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_Systick_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 11_Systick_Delay.elf
+ 
+arm-none-eabi-size  11_Systick_Delay.elf 
+arm-none-eabi-objdump -h -S 11_Systick_Delay.elf  > "11_Systick_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   5352	     92	   1900	   7344	   1cb0	11_Systick_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: 11_Systick_Delay.list
+ 
+19:16:47 **** Incremental Build of configuration Debug for project 11_Systick_Delay ****
+make -j24 all 
+arm-none-eabi-size  11_Systick_Delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5352	     92	   1900	   7344	   1cb0	11_Systick_Delay.elf
+Finished building: default.size.stdout
  

@@ -36,8 +36,8 @@ int main(void)
 
 void uar2_tx_init(void)
 {
-	// Config uart GPIO pin
-	// Enable clock access to gpioa
+	// Configure UART GPIO pin
+	// Enable clock access to GPIOA
 	RCC->AHB1ENR |=GPIOAEN;
 	// Set PA2 mode to alternate function mode
 	GPIOA->MODER &=~(1U<<4);

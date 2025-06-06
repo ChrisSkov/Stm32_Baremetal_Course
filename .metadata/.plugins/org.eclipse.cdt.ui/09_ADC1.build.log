@@ -1,21 +1,10 @@
-15:49:49 **** Incremental Build of configuration Debug for project 09_ADC1 ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/Chris/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "09_ADC1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Chris\Documents\Stm32_Baremetal_Course\09_ADC1\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="09_ADC1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 09_ADC1.elf
- 
+15:20:24 **** Incremental Build of configuration Debug for project 09_ADC1 ****
+make -j24 all 
 arm-none-eabi-size  09_ADC1.elf 
-arm-none-eabi-objdump -h -S 09_ADC1.elf  > "09_ADC1.list"
    text	   data	    bss	    dec	    hex	filename
-   5400	     92	   1908	   7400	   1ce8	09_ADC1.elf
+   7652	     92	   1908	   9652	   25b4	09_ADC1.elf
 Finished building: default.size.stdout
  
-Finished building: 09_ADC1.list
- 
 
-15:49:50 Build Finished. 0 errors, 0 warnings. (took 1s.883ms)
+15:20:24 Build Finished. 0 errors, 0 warnings. (took 157ms)
 
