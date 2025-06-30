@@ -1,0 +1,9 @@
+C:/Users/stoff/Documents/Stm32_Baremetal_Course/F4_chip_headers/F4_chip_headers/chip_headers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+../Src/uart.c:28:5:__io_putchar	16	static
+../Src/uart.c:34:6:uart2_rx_interrupt_init	8	static
+../Src/uart.c:86:6:uart2_tx_init	8	static
+../Src/uart.c:119:6:uart2_rxtx_init	8	static
+../Src/uart.c:161:6:uart2_read	4	static
+../Src/uart.c:175:6:uart2_write	16	static
+../Src/uart.c:186:13:uart_set_baudrate	24	static
+../Src/uart.c:191:17:compute_uart_bd	16	static

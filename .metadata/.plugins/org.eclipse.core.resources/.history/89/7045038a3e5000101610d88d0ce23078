@@ -1,0 +1,17 @@
+#include "exti.h"
+
+
+
+void pc13_exti_init(void)
+{
+	// (OPTIONAL) Disable global interrupts
+	__disable_irq();
+	// Enable clock access to GPIO C
+	// Enable clock access to SYSCFG
+	// Select PORTC for EXTI13
+	// Unmask EXTI13
+	// Select falling edge trigger
+	// Enable EXTI13 line in NVIC
+	// Enable global interrupts
+	__enable_irq();
+}

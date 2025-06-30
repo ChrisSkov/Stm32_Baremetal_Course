@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "adc.h"
+#include "systick.h"
+#include "tim.h"
+#include "exti.h"
+
+
+int timestamp = 0;
+// Set up: Connect jumper wire fro PA5 to PA6
+int main(void)
+{
+
+	pc13_exti_init();
+
+	while(1)
+	{
+
+	}
+
+}
+
+
+
+
+
+
