@@ -1,0 +1,43 @@
+# Ignore build directories
+Debug/
+Release/
+build/
+
+# Ignore IDE specific files
+.settings/
+.project
+.cproject
+
+# Ignore CubeIDE generated files
+STM32CubeIDE/
+*.ioc
+
+# Ignore compiled files
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+*.lst
+*.map
+
+# Ignore user settings and workspace files
+*.launch
+*.prefs
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore STM32CubeMX generated files
+STM32Cube/
+Drivers/CMSIS/
+Drivers/STM32xx_HAL_Driver/
+Middlewares/
